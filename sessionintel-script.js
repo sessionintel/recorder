@@ -2148,12 +2148,12 @@ function save() {
     if (events.length > 0) {
         const body = JSON.stringify({
             events,
-            linkId: document.currentScript.getAttribute('linkId'),
-            sessionId: document.currentScript.getAttribute('sessionId'),
+            linkId: document.currentScript.getAttribute('linkid'),
+            sessionId: document.currentScript.getAttribute('sessionid'),
             savedLength: timer2 - timer,
             tag: window.location.hash.substr(1),
         })
-        fetch(document.currentScript.getAttribute('envDomain')+'/s', {
+        fetch(document.currentScript.getAttribute('envdomain')+'/s', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
